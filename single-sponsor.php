@@ -102,7 +102,7 @@ get_template_part('ads/sponsor-header');
 				<div class="sponsored-row">
 					<?php $args = array(
 						'post_type'=>'post',
-						'posts_per_page'=>12,
+						'posts_per_page'=>18,
 						'orderby'=>'date',
 						'order'=>'DESC',
 						'paged'=>$paged,
