@@ -96,7 +96,7 @@ get_template_part('ads/sponsor-header');
 								<div class="q-readmore"><a href="<?php the_permalink(); ?>">Read more</a></div>
 							</div><!-- post block -->	
 						</section>
-					<?php wp_reset_postdata();
+					<?php wp_reset_postdata(); wp_reset_query();
 					endif;?>
 				</div><!--.sponsored-row-->
 				<div class="sponsored-row">
