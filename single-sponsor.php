@@ -5,12 +5,12 @@
 
 if(have_posts()): the_post();
 	$sponsors = get_field('sponsors');
-	if($sponsors):
-		$post = get_post($sponsors[0]->ID);
-		setup_postdata( $post );
-		get_template_part('ads/sponsor-header');
-		wp_reset_postdata();
-	endif;
+	// if($sponsors):
+	// 	$post = get_post($sponsors[0]->ID);
+	// 	setup_postdata( $post );
+	// 	get_template_part('ads/sponsor-header');
+	// 	wp_reset_postdata();
+	// endif;
 endif;
 
 $display_to_public = get_field("display_to_public");
@@ -172,9 +172,10 @@ get_template_part('ads/sponsor-header');
 				</div><!--.sponsored-row-->
 			</div><!--.site-content-->
 			<div class="widget-area">
-			<?php if($sponsors):
-					$post = get_post($sponsors[0]->ID);
-					setup_postdata( $post );
+			<?php //get_template_part('inc/our-partners'); ?>
+			<?php //if($sponsors):
+					// $post = get_post($sponsors[0]->ID);
+					// setup_postdata( $post );
 					$logo = get_field("logo");
 					$description = get_field("description");
 					$logo_link = get_field("logo_hyperlink");
@@ -204,7 +205,7 @@ get_template_part('ads/sponsor-header');
 						</div><!--.sponsor-sidebar-->
 					<?php get_template_part('ads/sponsor');
 					wp_reset_postdata();
-				endif;
+				//endif;
 				get_template_part( 'ads/sponsor' );?>
 			</div><!--.widget-area-->
 		</div><!-- #content -->
