@@ -166,7 +166,7 @@ get_template_part('ads/sponsor-header');
 							<?php endif;?>
 							<?php $i++;
 						endwhile;?>
-						<?php //pagi_posts_nav_modified($query); ?>
+						<?php pagi_posts_nav_modified($query); ?>
 					<?php wp_reset_postdata();
 					endif;?>
 				</div><!--.sponsored-row-->
