@@ -43,6 +43,12 @@ if( $healthFeaturedPost != '' )  {
 	$args = array(
 	    'posts_per_page' => 1, 
 	    'cat' => '6', 
+	    'meta_query' => [
+	        [
+	            'key' => '_yoast_wpseo_primary_category',
+	            'value' => '6',
+	        ]
+	    ],
 	    
 	);
 }
@@ -91,6 +97,12 @@ if( $peopleFeaturedPost != '' )  {
 	$args = array(
 	    'posts_per_page' => 1, 
 	    'cat' => '4', 
+	    'meta_query' => [
+	        [
+	            'key' => '_yoast_wpseo_primary_category',
+	            'value' => '4',
+	        ]
+	    ],
 	    
 	);
 }
@@ -142,7 +154,13 @@ if( $newsFeaturedPost != '' )  {
 } else {
 	$args = array(
 	    'posts_per_page' => 1, 
-	    'cat' => '1', 
+	    'cat' => '1',
+	    'meta_query' => [
+	        [
+	            'key' => '_yoast_wpseo_primary_category',
+	            'value' => '1',
+	        ]
+	    ], 
 	    
 	);
 }
@@ -193,6 +211,12 @@ if( $faithFeaturedPost != '' )  {
 	$args = array(
 	    'posts_per_page' => 1, 
 	    'cat' => '2', 
+	    'meta_query' => [
+	        [
+	            'key' => '_yoast_wpseo_primary_category',
+	            'value' => '2',
+	        ]
+	    ],
 	    
 	);
 }
