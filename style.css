@@ -2017,9 +2017,9 @@ z-index: 6;
 	font-family: 'Oswald', sans-serif;
 	transition: right 0.3s ease;
 }
-.below-gallery {
+/*.below-gallery {
 	margin-top: 50px;	
-}
+}*/
 .mg-video, section.mg-top {
 	margin: 0 0 40px 0;
 	overflow: hidden;	
