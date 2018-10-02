@@ -16,7 +16,20 @@ get_header();
 			<?php endif;?>
 			<div class="row-2">
 				<a class="banner-button" href="<?php echo get_permalink(48786);?>">Post a Job</a>
-				<div class="banner-button find">Find a Job</div>
+				<div class="banner-button find">Find a Job
+				<?php //$terms = get_terms(array('taxonomy'=>'event_cat'));
+					$terms = get_field("categories_to_show");
+                        //if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):
+					if(is_array($terms)&&!empty($terms)):?>
+                            <ul>
+                                <?php foreach($terms as $term):?>
+                                    <li>
+                                        <a href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a>    
+                                    </li>
+                                <?php endforeach;?>
+                            </ul>
+                        <?php endif;?>
+				</div>
 			</div><!--.row-1-->
 			<div class="row-3">
 				<form action="<?php echo get_permalink();?>" method="GET">
@@ -27,7 +40,7 @@ get_header();
 						</button>
 						<div class="clear"></div>
 					</div><!--.row-1-->
-					<div class="row-2">
+					<!--<div class="row-2">
 						<?php $terms = get_field("categories_to_show");
 						if(is_array($terms)&&!empty($terms)):?>
 							<ul>
@@ -39,8 +52,8 @@ get_header();
 								<?php endforeach;?>
 							</ul>
 						<?php endif;?>
-					</div><!--.row-2-->
-					<div class="row-3">
+					</div>.row-2-->
+					<!--<div class="row-3">
 						<?php $terms = get_terms(array('taxonomy'=>'level','hide_empty'=>false));
 						if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
 							<ul>
@@ -52,7 +65,7 @@ get_header();
 								<?php endforeach;?>
 							</ul>
 						<?php endif;?>
-					</div><!--.row-3-->
+					</div>.row-3-->
 				</form>
 			</div><!--.row-1-->
 		</div><!--.jobs-banner-->
