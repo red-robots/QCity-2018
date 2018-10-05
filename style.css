@@ -3748,6 +3748,9 @@ img#wpstats {
 		margin: 10px 10px 0 10px;
 		display: inline-block;
 	}
+	.jobs-banner >.row-2 .banner-button ul li a {
+		font-size: 14px;
+	}
 	.jobs-banner >.row-3 form >.row-2 ul li input, .jobs-banner >.row-3 form >.row-3 ul li input {
 	}
 	.jobs-banner >.row-3 form >.row-2 ul li label, .jobs-banner >.row-3 form >.row-3 ul li label {
