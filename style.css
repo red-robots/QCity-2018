@@ -1020,6 +1020,9 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > .ui-datepicker[aria-hi
 	text-align: center;
 	color: white;
 	position: relative;
+	/*display: flex;
+	flex-direction: colomn;
+	justify-content: flex-end;*/
 }
 .jobs-banner:before {
 	content: "";
@@ -1070,7 +1073,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > .ui-datepicker[aria-hi
 	background-color: white;
 	padding: 10px 20px;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 16px;
 	display: inline-block;
 	cursor: pointer;
 	position: relative;
@@ -1179,6 +1182,31 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > .ui-datepicker[aria-hi
 .jobs-banner >.row-3 form >.row-2 ul li label, .jobs-banner >.row-3 form >.row-3 ul li label {
 	font-size: 18px;
 	vertical-align: middle;
+}
+.below-banner {
+	background-color: #e8e8e8;
+	text-align: center;
+	padding: 20px 0;
+}
+.below-banner form {
+	width: auto;
+	display: inline-block;
+	background-color: #fff;
+	-webkit-box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
+-moz-box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
+box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
+}
+.below-banner input {
+	background-color: #fff;
+	padding: 10px 20px;
+	margin: 0;
+	border: 0;
+}
+.below-banner button {
+	background-color: #813F27;
+	color: #fff;
+	padding: 10px 20px;
+	margin: 0;
 }
 /* =========== Job board sidebar =============*/
 .job-views {
@@ -3655,7 +3683,7 @@ img#wpstats {
 	}
 	/*==============JOB BOARD PAGE ===============*/
 	.jobs-banner{
-		padding: 5%;
+		padding:  5% 5% 2% 5%;
 	}
 	.jobs-banner >.row-1 {
 		font-size: 35px;
@@ -3674,7 +3702,7 @@ img#wpstats {
 		width: 80%;
 	}
 	.jobs-banner >.row-2 .banner-button {
-		font-size: 25px;
+		font-size: 18px;
 	}
 	.jobs-banner >.row-3 {
 		margin: 30px auto 0 auto;

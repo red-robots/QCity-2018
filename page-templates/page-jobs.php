@@ -31,15 +31,18 @@ get_header();
                         <?php endif;?>
 				</div>
 			</div><!--.row-1-->
+			
+		</div><!--.jobs-banner-->
+		<section class="below-banner">
 			<div class="row-3">
 				<form action="<?php echo get_permalink();?>" method="GET">
-					<div class="row-1">
+					
 						<input type="text" name="search" placeholder="Search">
 						<button type="submit">
 							<i class="fa fa-search"></i>
 						</button>
 						<div class="clear"></div>
-					</div><!--.row-1-->
+					
 					<!--<div class="row-2">
 						<?php $terms = get_field("categories_to_show");
 						if(is_array($terms)&&!empty($terms)):?>
@@ -68,7 +71,7 @@ get_header();
 					</div>.row-3-->
 				</form>
 			</div><!--.row-1-->
-		</div><!--.jobs-banner-->
+		</section>
 		<div id="content" role="main" class="wrapper">
 			<div class="site-content job-board">
 				<header class="archive-header">
