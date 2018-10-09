@@ -1105,9 +1105,17 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > .ui-datepicker[aria-hi
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 100%;
+	-webkit-box-shadow: 2px 2px 11px 0px rgba(0,0,0,0.37);
+-moz-box-shadow: 2px 2px 11px 0px rgba(0,0,0,0.37);
+box-shadow: 2px 2px 11px 0px rgba(0,0,0,0.37);
 	z-index: 100;
-	border: 2px solid #803F26;
+	border-bottom: 3px solid #803F26;
+}
+.jobs-banner >.row-2 .banner-button:hover ul {
+	width: 250px;
+}
+.event-cat-button:hover ul {
+	width: 100%;
 }
 .jobs-banner >.row-2 .banner-button ul li, .event-cat-button ul li {
 	list-style-type: none;

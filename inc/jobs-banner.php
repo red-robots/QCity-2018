@@ -11,8 +11,12 @@
 				<a class="banner-button" href="<?php echo get_permalink(48786);?>">Post a Job</a>
 				<div class="banner-button find">Find a Job
 				<?php //$terms = get_terms(array('taxonomy'=>'event_cat'));
-					$terms = get_field("categories_to_show");
+					//$terms = get_field("categories_to_show");
                         //if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):
+				$terms = get_terms( array(
+				    'taxonomy' => 'job_cat',
+				    'hide_empty' => false,
+				) );
 					if(is_array($terms)&&!empty($terms)):?>
                             <ul>
                                 <?php foreach($terms as $term):?>
