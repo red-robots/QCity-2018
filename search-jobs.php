@@ -12,7 +12,8 @@ get_header(); ?>
 	<section id="primary" class="">
 		<div id="content" role="main" class="wrapper">
 
-		<div class="site-content">
+		<div class="site-content-full">
+			<div class="site-content job-board">
 			<?php if ( have_posts() ) : ?>
 				<header class="archive-header">
 					<div class="border-title">
@@ -94,84 +95,52 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
 			<?php endif; ?>
-			<div class="search-widget-area widget-area">
-				<?php $args = array(
-					'post_type'=>'column',
-					'posts_per_page'=>-1
-				);
-				$query = new WP_Query($args);
-				if($query->have_posts()):?>
-					<div class="search-border-title">
-						<h2>Columns</h2>
-					</div><!-- border title -->
-					<div class="entry-content">
-						<?php while($query->have_posts()):$query->the_post();?>
-							<div class="search-list">
-								<a href="<?php echo get_the_permalink();?>">
-									<?php the_title();?>
-								</a>
-							</div><!--.search-list-->
-						<?php endwhile;?>
-					</div><!-- .entry-content -->
-					<?php wp_reset_postdata(); 
-				endif;
-				$tags = get_tags(array(
-					'orderby' => 'count', 
-					'order' => 'DESC',
-					'number'=>10
-				));
-				if(!empty($tags)):?>
-					<div class="search-border-title">
-						<h2>Top Tags</h2>
-					</div><!-- border title -->
-					<div class="entry-content">
-						<?php foreach($tags as $tag):?>
-							<div class="search-list">
-								<?php $link = get_term_link($tag);
-								if(!is_wp_error($link)):?>
-									<a href="<?php echo $link;?>">
-								<?php endif;?>
-									<?php echo $tag->name;?>
-								<?php if(!is_wp_error($link)):?>
-									</a>
-								<?php endif;?>
-							</div><!--.search-list-->
-						<?php endforeach;?>
-					</div><!-- .entry-content -->
-				<?php endif;
-				$terms = get_terms( array(
-					'taxonomy' => 'category',
-				));
-				if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
-					<div class="search-border-title">
-						<h2>Categories</h2>
-					</div><!-- border title -->
-					<div class="entry-content">
-						<?php foreach($terms as $term):?>
-							<div class="search-list">
-								<?php $link = get_term_link($term);
-								if(!is_wp_error($link)):?>
-									<a href="<?php echo $link;?>">
-								<?php endif;?>
-									<?php echo $term->name;?>
-								<?php if(!is_wp_error($link)):?>
-									</a>
-								<?php endif;?>
-							</div><!--.search-list-->
-						<?php endforeach;?>
-					</div><!-- .entry-content -->
+			</div>
+
+			<div class="widget-area">
+				<?php get_template_part('ads/job-board-home');?>
+				<?php //get_template_part('inc/job-board-partners') ?>
+				<?php if (function_exists('wpp_get_views')):?>
+					<div class="job-views">
+						Total Montly Job Board Views:&nbsp;<?php echo wpp_get_views( get_the_ID() );?>
+					</div><!--.views-->
 				<?php endif;?>
-       		</div><!-- widget area -->
+				<div class="job-sidebar">
+					<a class="button" href="<?php echo get_permalink(48786);?>">Post a Job</a>
+					<?php $copy = get_field("post_job_copy");
+					if($copy):?>
+						<div class="copy">
+							<?php echo $copy;?>
+						</div><!--.copy-->
+					<?php endif;?>
+				</div>
+				<div class="brew-sidebar">
+					<div class="border-title">
+						<h2>Morning Brew</h2>
+					</div><!-- border title -->
+					<div class="brew-wrapper">
+						<?php $copy = get_field("morning_brew_copy");
+						if($copy):?>
+							<div class="copy">
+								<?php echo $copy;?>
+							</div><!--.copy-->
+						<?php endif;?>
+						<a class="button" href="<?php echo get_permalink(21613);?>">Signup</a>
+					</div><!--.wrapper-->
+				</div><!--.brew-sidebar-->
+				<?php get_template_part('ads/right-big'); ?>
+			</div><!--.widget-area-->
+
+
+			
+       		
 		</div><!-- site content -->
         
         <!-- 
 			Ad Zone
 
 ======================================================== -->        
-        <div class="widget-area">
-        	<?php get_template_part('ads/right-big'); ?>
-            
-        </div><!-- widget area -->
+        
         
         <div class="clear"></div>
 
