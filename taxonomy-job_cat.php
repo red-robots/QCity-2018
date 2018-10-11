@@ -54,7 +54,10 @@ get_header(); ?>
 					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h1>
 				<?php endif; // is_single() ?>
-				
+				<div class="views-search">
+					<p>Views for this job:&nbsp;<?php echo wpp_get_views( get_the_ID() );?></p>
+					
+				</div><!--.views-->
 			</header><!-- .entry-header -->
 
 			<?php if ( is_search() ) : // Only display Excerpts for Search ?>

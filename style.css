@@ -541,6 +541,11 @@ div.mce-toolbar-grp>div,
 .ad img {
 	width: 100%;
 }
+.views-search {
+	width: auto;
+	display: inline-block;
+	margin: 10px 0 ;
+}
 /* = Sponsored Content Qcity curious
 -------------------------------------------------------------- */
 .about-sponsored {
