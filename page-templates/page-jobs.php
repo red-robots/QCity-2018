@@ -126,7 +126,7 @@ get_header();
 				<?php //get_template_part('inc/job-board-partners') ?>
 				<?php if (function_exists('wpp_get_views')):?>
 					<div class="job-views">
-						Total Montly Job Board Views:&nbsp;<?php echo wpp_get_views( get_the_ID() );?>
+						Total Monthly Job Board Views:&nbsp;<?php echo wpp_get_views( get_the_ID() );?>
 					</div><!--.views-->
 				<?php endif;?>
 				<div class="job-sidebar">
