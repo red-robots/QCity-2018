@@ -5,7 +5,10 @@
  */
 get_header();?>
     <div id="primary" class="single-job">
-		<?php get_template_part('inc/jobs-banner'); ?>
+		<?php $post = get_post(48778); 
+				setup_postdata( $post );
+				get_template_part('inc/jobs-banner');
+				 wp_reset_postdata(); ?>
         <div id="content" role="main" class="wrapper template-single-news">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<!--
@@ -30,11 +33,15 @@ get_header();?>
 						<div class="job-company-row">	
 							<?php $image = get_field('image');
 							$company_name = get_field("company_name");?>								
-							<?php if ( $image ): ?>
+							<?php //if ( $image ): 
+								if(has_post_thumbnail()) {
+							?>
 								<div class="image">
-									<img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'];?>">
+									<?php the_post_thumbnail(); ?>
+									<!-- <img src="<?php echo $image['url']; ?>" alt="<?php $image['alt'];?>"> -->
 								</div><!--.image-->
-							<?php endif; ?>
+							<?php }
+							//endif; ?>
 							<?php if (function_exists('wpp_get_views')):?>
 								<div class="data"> 
 									<header>

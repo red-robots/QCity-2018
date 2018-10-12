@@ -77,13 +77,18 @@ get_header();
 						<?php while($query->have_posts()):$query->the_post();?>
 							<div class="job">
 								<?php $image = get_field('image');?>								
-								<?php if ( $image ): ?>
+								<?php //if ( $image ): 
+									if(has_post_thumbnail()) {
+								?>
 									<div class="image">
 										<a href="<?php the_permalink();?>">
-											<img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php $image['alt'];?>">
+										<?php the_post_thumbnail(); ?>
+											<!-- <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php $image['alt'];?>"> -->
 										</a>
 									</div><!--.image-->
-								<?php endif; ?>
+								<?php 
+										}
+								//endif; ?>
 								<div class="copy">
 									<?php $job_title = get_field("job_title");
 									$company_name = get_field("company_name");
