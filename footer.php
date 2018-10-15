@@ -62,7 +62,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php the_field('google_analytics','option'); ?>
+
 <?php 
 acf_enqueue_uploader();
 wp_footer(); ?>

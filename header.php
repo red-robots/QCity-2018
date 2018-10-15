@@ -28,7 +28,7 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-
+<?php the_field('google_analytics','option'); ?>
 <!-- test -->
 <script src="https://use.fontawesome.com/5001f6a306.js"></script>
 <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
