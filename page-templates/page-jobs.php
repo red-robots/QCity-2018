@@ -115,7 +115,9 @@ get_header();
 							</div><!--.job-->
 						<?php endwhile;?>
 					</section><!--.jobs-->
-					<?php pagi_posts_nav_modified($query); ?>
+					<?php 
+					//echo get_the_ID();
+					pagi_posts_nav_modified($query); ?>
 					<?php wp_reset_postdata();
 				else:?> 
 					<header class="alternate"><h2>Oops! Nothing was found, please try another search!</h2></header>
@@ -126,6 +128,7 @@ get_header();
 				<?php //get_template_part('inc/job-board-partners') ?>
 				<?php if (function_exists('wpp_get_views')):?>
 					<div class="job-views">
+						<?php //echo get_the_ID(); ?>
 						Total Monthly Job Board Views:&nbsp;<?php echo wpp_get_views( get_the_ID() );?>
 					</div><!--.views-->
 				<?php endif;?>

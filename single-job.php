@@ -118,7 +118,7 @@ get_header();?>
 				</div><!-- site content -->
 			<?php endwhile; // end of the loop.?>
 			<div class="widget-area">
-            	<?php get_template_part('ads/right-small'); 
+            	<?php //get_template_part('ads/right-small'); 
 				$popular_posts_title = get_field("popular_posts_title", 48778);
 				if($popular_posts_title):?>
 					<div class="border-title">
