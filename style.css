@@ -1046,7 +1046,7 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > .ui-datepicker[aria-hi
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -2;
+	z-index: 0;
 	width: 100%;
 	height: 100%;
 }
