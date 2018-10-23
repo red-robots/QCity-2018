@@ -5,6 +5,7 @@
  * 
  */
 wp_reset_query();
+
 get_header(); ?>
 
 	<section id="primary" class="site-content-full">
@@ -21,11 +22,11 @@ get_header(); ?>
 			
 		<div id="content" role="main" class="wrapper">
 			<div class="site-content job-board">
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : $queried_object = get_queried_object();  ?>
 	        <header class="archive-header archive-push">
 					
 	                <div class="border-title">
-	                    <h1>Job Search</h1>
+	                    <h1>Job Search | <?php echo $queried_object->name; ?></h1>
 	                </div><!-- border title -->
 
 				</header><!-- .archive-header -->
@@ -33,50 +34,53 @@ get_header(); ?>
 				
 
 				<?php
-				 $queried_object = get_queried_object();
-	 // var_dump( $queried_object );
-				/* Start the Loop */
-				while ( have_posts() ) : the_post(); ?>
+				 
+	  //var_dump( $queried_object );
+				/* Start the Loop */ ?>
+				<section class="jobs">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="job">
+								<?php $image = get_field('image');?>								
+								<?php //if ( $image ): 
+									if(has_post_thumbnail()) {
+								?>
+									<div class="image">
+										<a href="<?php the_permalink();?>">
+										<?php the_post_thumbnail(); ?>
+											<!-- <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php $image['alt'];?>"> -->
+										</a>
+									</div><!--.image-->
+								<?php 
+										}
+								//endif; ?>
+								<div class="copy">
+									<?php $job_title = get_field("job_title");
+									$company_name = get_field("company_name");
+									if($job_title):?>
+										<h2><?php echo $job_title;?></h2>
+									<?php endif;
+									if($company_name):?>
+										<div class="excerpt"><?php echo $company_name; ?></div><!--.excerpt-->
+									<?php endif;?>
+								</div><!-- copy -->	
+								<div class="clear"></div>
+								<?php if (function_exists('wpp_get_views')):?>
+									<div class="data"> 
+										<div class="date"><?php echo get_the_date(); ?></div><!--.date-->
+										<div class="views">
+											Views:&nbsp;<?php echo wpp_get_views( get_the_ID() );?>
+										</div><!--.views-->
+									</div><!--.data-->
+								<?php endif;?>
+								<div class="button">
+									<a href="<?php the_permalink();?>">View</a>
+								</div><!--.button-->
+								<div class="clear"></div>
+							</div><!--.job-->
+					<?php endwhile; ?>
+					</section>
 
-
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<div class="featured-post">
-				<?php _e( 'Featured post', 'twentytwelve' ); ?>
-			</div>
-			<?php endif; ?>
-			<header class="entry-header">
-				<?php the_post_thumbnail(); ?>
-				<?php if ( is_single() ) : ?>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php else : ?>
-				<h1 class="entry-title">
-					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h1>
-				<?php endif; // is_single() ?>
-				<div class="views-search">
-					<p>Views for this job:&nbsp;<?php echo wpp_get_views( get_the_ID() );?></p>
-					
-				</div><!--.views-->
-			</header><!-- .entry-header -->
-
-			<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-			<div class="entry-summary">
-				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
-			<?php else : ?>
-			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-			</div><!-- .entry-content -->
-			<?php endif; ?>
-
-			
-		</article><!-- #post -->
-
-				<?php endwhile;
-
-				twentytwelve_content_nav( 'nav-below' );
+				<?php twentytwelve_content_nav( 'nav-below' );
 				?>
 
 			<?php else : 
@@ -101,7 +105,12 @@ get_header(); ?>
 			 endif; ?>
 			 </div>
 			 <div class="widget-area">
-				<?php get_template_part('ads/job-board-home');?>
+				<?php get_template_part('ads/job-board-home');
+
+				$post = get_post(48778); 
+				setup_postdata( $post ); 
+
+				?>
 				<?php //get_template_part('inc/job-board-partners') ?>
 				<?php if (function_exists('wpp_get_views')):?>
 					<div class="job-views">
@@ -131,6 +140,7 @@ get_header(); ?>
 						<a class="button" href="<?php echo get_permalink(21613);?>">Signup</a>
 					</div><!--.wrapper-->
 				</div><!--.brew-sidebar-->
+				<?php wp_reset_postdata(); ?>
 			</div><!--.widget-area-->
 		</div><!-- #content -->
 	</section><!-- #primary -->
