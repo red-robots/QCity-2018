@@ -362,8 +362,9 @@ img.wp-post-image {
 }
 .big-story-image p {
 	margin: 10px 0;
-}
-.widget-area #__bs_rotation_63525_181305 a {
+}				
+
+div#__bs_rotation_63525_181305 a {
 	display: block!important;
 }
 /* Make sure videos and embeds fit their containers */
