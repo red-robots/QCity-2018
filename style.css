@@ -363,9 +363,10 @@ img.wp-post-image {
 .big-story-image p {
 	margin: 10px 0;
 }				
-div#__bs_rotation_63525_181305,
+div#__bs_rotation_63525,
 div#__bs_rotation_63525_181305 a {
 	display: block!important;
+	width: 100%!important;
 }
 /* Make sure videos and embeds fit their containers */
 embed,
