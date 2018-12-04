@@ -356,8 +356,9 @@ img.wp-post-image {
 	font-size: 12px;
 } 
 .big-story-image img {
-	width: 100%;
 	display: block;
+	width: 100%;
+	height: auto;
 }
 .big-story-image p {
 	margin: 10px 0;
