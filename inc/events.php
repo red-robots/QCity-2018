@@ -76,9 +76,13 @@ $thumb = $image['sizes'][ $size ];
     
 	<div class="event-right">
         <div class="event-day">
-        <?php if( $numPosts != $i && $numPosts - 1 != $i ) { ?>
+        <?php 
+            //echo '<pre>'.$numPosts.'<br>'.$i.'</pre>';
+
+         ?>
+        <?php //if( $numPosts != $i && $numPosts - 1 != $i ) { ?>
         	<?php echo $date->format('l'); ?>   <?php echo $date->format('n/d'); ?>
-        <?php } ?>
+        <?php //} ?>
         </div>
         <!-- <div class="event-month-num"></div> -->
         <div class="event-title"><?php the_title(); //echo ac_get_title(38); ?></div>
