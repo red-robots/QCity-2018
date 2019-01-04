@@ -123,12 +123,13 @@ get_header();?>
                     $post__in = $temp__in;
 
                     //last two posts are marketing so remove
-                    if(count($post__in)>2):
-                        array_pop($post__in);
-                        array_pop($post__in);
-                    elseif(count($post__in)==2):
-                        $post__in = array(-1);
-                    endif;
+                    // Took this out to see if post would show.
+                    // if(count($post__in)>2):
+                    //     array_pop($post__in);
+                    //     array_pop($post__in);
+                    // elseif(count($post__in)==2):
+                    //     $post__in = array(-1);
+                    // endif;
 
                     $args = array(
                         'post_type'=>'event',
