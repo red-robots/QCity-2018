@@ -194,10 +194,8 @@ jQuery(document).ready(function ($) {
  			<?php // wp_related_posts(); ?>
             <div class="clear"></div>
 
-            <?php //comments_template( '', true );
-        echo do_shortcode('[fbcomments width="375" count="off" num="5" countmsg="comments!"]');
-        
-         ?>
+            <?php //echo do_shortcode( '[fbcomments url="" width="375" count="off" num="3" countmsg="wonderful comments!"]' ); ?>
+          <?php echo do_shortcode( '[Fancy_Facebook_Comments]' ); ?>
             
 </div><!-- #content -->
 	</div><!-- #primary -->
