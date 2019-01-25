@@ -122,8 +122,13 @@ get_header();?>
                     endif;
                     $post__in = $temp__in;
 
+                    /* 
+
+                    Took this out to see if post would show.
+
+                    */
+
                     //last two posts are marketing so remove
-                    // Took this out to see if post would show.
                     // if(count($post__in)>2):
                     //     array_pop($post__in);
                     //     array_pop($post__in);

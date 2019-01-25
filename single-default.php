@@ -196,7 +196,8 @@
 					<?php	get_template_part( 'inc/extra-click' );?>
 					<div class="clear"></div>
 					<div id="goto-comments"></div>
-					<?php echo do_shortcode( '[fbcomments url="" width="375" count="off" num="3" countmsg="wonderful comments!"]' ); ?>
+					<?php //echo do_shortcode( '[fbcomments url="" width="375" count="off" num="3" countmsg="wonderful comments!"]' ); ?>
+					<?php echo do_shortcode( '[Fancy_Facebook_Comments]' ); ?>
 				</div><!-- site content -->
 
 			<?php endwhile; // end of the loop.?>
