@@ -67,6 +67,6 @@
 acf_enqueue_uploader();
 wp_footer(); ?>
 
-<!-- liquid web -->
+<!-- liquid web updated -->
 </body>
 </html>
