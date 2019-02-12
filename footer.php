@@ -33,7 +33,7 @@
 		$sitemap = get_field( 'sitemap_link', 'option' );
 		
 		?>
-        <?php get_template_part('inc/email-modal'); ?>
+        <?php //get_template_part('inc/email-modal'); ?>
         <div class="footer-left">
 			<div class="footer-bio"><?php echo $footerbio; ?></div>
             <nav class="footermenu"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></nav>
