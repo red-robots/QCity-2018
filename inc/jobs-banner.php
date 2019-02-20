@@ -27,6 +27,7 @@
                             </ul>
                         <?php endif;?>
 				</div>
+				<a class="banner-button" href="<?php bloginfo('url');?>/why-this-jobs-board-matters/">More Info</a>
 			</div><!--.row-1-->
 			
 		</div><!--.jobs-banner-->
