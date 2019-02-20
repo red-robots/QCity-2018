@@ -8,7 +8,7 @@
 				</div><!--.row-1-->
 			<?php endif;?>
 			<div class="row-2">
-				<a class="banner-button" href="<?php echo get_permalink(48786);?>">Post a Job</a>
+				
 				<div class="banner-button find">Find a Job
 				<?php //$terms = get_terms(array('taxonomy'=>'event_cat'));
 					//$terms = get_field("categories_to_show");
@@ -27,7 +27,9 @@
                             </ul>
                         <?php endif;?>
 				</div>
+				<a class="banner-button" href="<?php echo get_permalink(48786);?>">Post a Job</a>
 				<a class="banner-button" href="<?php bloginfo('url');?>/why-this-jobs-board-matters/">More Info</a>
+
 			</div><!--.row-1-->
 			
 		</div><!--.jobs-banner-->
