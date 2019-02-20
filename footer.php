@@ -33,7 +33,7 @@
 		$sitemap = get_field( 'sitemap_link', 'option' );
 		
 		?>
-        <?php //get_template_part('inc/email-modal'); ?>
+        <?php get_template_part('inc/email-modal'); ?>
         <div class="footer-left">
 			<div class="footer-bio"><?php echo $footerbio; ?></div>
             <nav class="footermenu"><?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?></nav>
@@ -53,7 +53,7 @@
             	<a href="<?php echo $pnl; ?>">privacy</a> &amp; <a href="<?php echo $legal; ?>">legal</a> | <a href="<?php echo $sitemap; ?>">sitemap</a>
             </div><!-- pnl -->
             <div class="clear"></div>
-           <div class="pnl"> site by <a href="http://bellaworksweb.com">bellaworks</a></div>
+           <div class="pnl"> site by <a href="https://bellaworksweb.com">bellaworks</a></div>
         </div><!-- footer left -->
         
         
@@ -67,6 +67,6 @@
 acf_enqueue_uploader();
 wp_footer(); ?>
 
-<!-- liquid web updated -->
+<!-- liquid web -->
 </body>
 </html>

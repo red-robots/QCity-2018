@@ -242,7 +242,8 @@ __________________________________________
 				if ($response.find("response_data").length > 0) {
                     $text = $response.find("response_data").eq(0).text();
 					//$('.menu-item-46728').append('<span class="splat">'+$text+"</span>");
-					$('.menu-item-54855').append('<span class="splat">'+$text+"</span>");
+					//$('.menu-item-54855').append('<span class="splat">'+$text+"</span>");
+					$('.menu-item-58030').append('<span class="splat">'+$text+"</span>");
                 }
             }
         );
