@@ -1388,7 +1388,28 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
 	font-size: 20px;
 	padding: 10px 20px;
 }
-
+.member-intro {
+	width: 70%;
+	margin: 30px auto 80px auto;
+}
+.member-intro .video {
+	max-width: 640px;
+	margin: 0 auto 30px auto;
+}
+.membership-thirds {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.membership-thirds .third {
+	width: 28%;
+	display: inline-block;
+	text-align: left;
+	margin: 2%;
+}
+.embed-container iframe {
+	margin: 0 auto;
+}
 /* Page structure */
 .site {
 	padding: 0px;
