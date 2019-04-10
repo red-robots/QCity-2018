@@ -8,7 +8,7 @@ add_filter('acf/update_value', 'wp_kses_post', 10, 1);
 
 get_header(); 
 
-$banner_image = get_field("banner_photof");
+$banner_image = get_field("banner_photo");
 $video = get_field("video");
 $description = get_field("description");
 $tier_1_desc = get_field("tier_1_desc");
