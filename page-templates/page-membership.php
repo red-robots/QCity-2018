@@ -61,7 +61,7 @@ $tier_3_mail = get_field("tier_3_mail");
 									Purchase Tier 1
 								</a>
 							</div>	
-							<?php echo $tier_1_mail; ?>
+							<div class="mailing-address"><?php echo $tier_1_mail; ?></div>
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
@@ -70,7 +70,7 @@ $tier_3_mail = get_field("tier_3_mail");
 									Purchase Tier 2
 								</a>
 							</div>	
-							<?php echo $tier_2_mail; ?>
+							<div class="mailing-address"><?php echo $tier_2_mail; ?></div>
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
@@ -79,7 +79,7 @@ $tier_3_mail = get_field("tier_3_mail");
 									Purchase Tier 3
 								</a>
 							</div>	
-							<?php echo $tier_3_mail; ?>
+							<div class="mailing-address"><?php echo $tier_3_mail; ?></div>
 						</div>
 					</section>
 				</div><!--.site-content-->

@@ -254,6 +254,11 @@ input[type="reset"]:active {
 	border: 1px solid #ededed;
 	border-color: transparent;
 }
+.mailing-address {
+	width: 100%;
+	float: left;
+	padding: 15px 0;
+}
 .acf-form-submit input {
 	background-color: #81402A;
 	padding :5px 10px;
