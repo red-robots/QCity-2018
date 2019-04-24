@@ -14,6 +14,9 @@ $description = get_field("description");
 $tier_1_desc = get_field("tier_1_desc");
 $tier_2_desc = get_field("tier_2_desc");
 $tier_3_desc = get_field("tier_3_desc");
+$tier_1_mail = get_field("tier_1_mail");
+$tier_2_mail = get_field("tier_2_mail");
+$tier_3_mail = get_field("tier_3_mail");
 ?>
 
 	<div id="primary" class="">
@@ -53,27 +56,30 @@ $tier_3_desc = get_field("tier_3_desc");
 					<section class="tiers membership-thirds">
 						<div class="third entry-content">
 							<?php echo $tier_1_desc; ?>
-							<div class="button">
-								<a class="gallery" href="">
+							<div class="button mem-annual">
+								<a class=" " href="">
 									Purchase Tier 1
 								</a>
 							</div>	
+							<?php echo $tier_1_mail; ?>
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
-							<div class="button">
-								<a class="gallery" href="">
+							<div class="button mem-donation">
+								<a class="" href="">
 									Purchase Tier 2
 								</a>
 							</div>	
+							<?php echo $tier_2_mail; ?>
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
 							<div class="button">
-								<a class="gallery" href="">
+								<a class="mem-monthly" href="">
 									Purchase Tier 3
 								</a>
 							</div>	
+							<?php echo $tier_3_mail; ?>
 						</div>
 					</section>
 				</div><!--.site-content-->
