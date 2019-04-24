@@ -17,6 +17,9 @@ $tier_3_desc = get_field("tier_3_desc");
 $tier_1_mail = get_field("tier_1_mail");
 $tier_2_mail = get_field("tier_2_mail");
 $tier_3_mail = get_field("tier_3_mail");
+$tier_1_btn = get_field("tier_1_btn");
+$tier_2_btn = get_field("tier_2_btn");
+$tier_3_btn = get_field("tier_3_btn");
 ?>
 
 	<div id="primary" class="">
@@ -58,7 +61,7 @@ $tier_3_mail = get_field("tier_3_mail");
 							<?php echo $tier_1_desc; ?>
 							<div class="button mem-annual">
 								<a class=" " href="">
-									Purchase Tier 1
+									<?php echo $tier_1_btn; ?>
 								</a>
 							</div>	
 							<div class="mailing-address"><?php echo $tier_1_mail; ?></div>
@@ -67,7 +70,7 @@ $tier_3_mail = get_field("tier_3_mail");
 							<?php echo $tier_2_desc; ?>
 							<div class="button mem-donation">
 								<a class="" href="">
-									Purchase Tier 2
+									<?php echo $tier_2_btn; ?>
 								</a>
 							</div>	
 							<div class="mailing-address"><?php echo $tier_2_mail; ?></div>
@@ -76,7 +79,7 @@ $tier_3_mail = get_field("tier_3_mail");
 							<?php echo $tier_3_desc; ?>
 							<div class="button">
 								<a class="mem-monthly" href="">
-									Purchase Tier 3
+									<?php echo $tier_3_btn; ?>
 								</a>
 							</div>	
 							<div class="mailing-address"><?php echo $tier_3_mail; ?></div>
