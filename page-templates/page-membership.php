@@ -69,7 +69,7 @@ $mail = antispambot( get_field("mailing_address") );
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
-							<div class="button mem-donation">
+							<div class="button mem-monthly">
 								<a class="" href="">
 									<?php echo $tier_2_btn; ?>
 								</a>
@@ -79,7 +79,7 @@ $mail = antispambot( get_field("mailing_address") );
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
 							<div class="button">
-								<a class="mem-monthly" href="">
+								<a class="mem-donation" href="">
 									<?php echo $tier_3_btn; ?>
 								</a>
 							</div>	
