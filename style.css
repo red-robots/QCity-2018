@@ -1405,6 +1405,12 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
 	width: 100%;
 	float: left;
 	text-align: center;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 }
 .membership-thirds .third {
 	width: 28%;
@@ -1414,6 +1420,15 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
 }
 .embed-container iframe {
 	margin: 0 auto;
+}
+.mailing-address {
+	width: 100%;
+	padding: 0px 0 40px 0;
+	text-align: center;
+}
+.mailing-address h2 {
+	font-size: 26px;
+	margin: 0 0 20px 0;
 }
 /* Page structure */
 .site {

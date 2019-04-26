@@ -20,6 +20,7 @@ $tier_3_mail = get_field("tier_3_mail");
 $tier_1_btn = get_field("tier_1_btn");
 $tier_2_btn = get_field("tier_2_btn");
 $tier_3_btn = get_field("tier_3_btn");
+$mail = antispambot( get_field("mailing_address") );
 ?>
 
 	<div id="primary" class="">
@@ -85,6 +86,12 @@ $tier_3_btn = get_field("tier_3_btn");
 							<div class="mailing-address"><?php echo $tier_3_mail; ?></div>
 						</div>
 					</section>
+					<section class="mailing-address">
+							<h2>Mail Address</h2>
+							<a href="mailto:<?php echo $mail; ?>"><?php echo $mail; ?></a>
+						
+					</section>
+
 				</div><!--.site-content-->
 				
 			<?php endwhile; // end of the loop. ?>
