@@ -65,7 +65,7 @@ $mail = antispambot( get_field("mailing_address") );
 									<?php echo $tier_1_btn; ?>
 								</a>
 							</div>	
-							<div class="mailing-address"><?php echo $tier_1_mail; ?></div>
+							
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
@@ -74,7 +74,7 @@ $mail = antispambot( get_field("mailing_address") );
 									<?php echo $tier_2_btn; ?>
 								</a>
 							</div>	
-							<div class="mailing-address"><?php echo $tier_2_mail; ?></div>
+							
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
@@ -83,7 +83,7 @@ $mail = antispambot( get_field("mailing_address") );
 									<?php echo $tier_3_btn; ?>
 								</a>
 							</div>	
-							<div class="mailing-address"><?php echo $tier_3_mail; ?></div>
+							
 						</div>
 					</section>
 					<section class="mailing-address">
