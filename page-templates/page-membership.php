@@ -20,7 +20,7 @@ $tier_3_mail = get_field("tier_3_mail");
 $tier_1_btn = get_field("tier_1_btn");
 $tier_2_btn = get_field("tier_2_btn");
 $tier_3_btn = get_field("tier_3_btn");
-$mail = antispambot( get_field("mailing_address") );
+$mail = get_field("mailing_address" false, false);
 ?>
 
 	<div id="primary" class="">
