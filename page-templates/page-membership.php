@@ -88,7 +88,7 @@ $mail = antispambot( get_field("mailing_address") );
 					</section>
 					<section class="mailing-address">
 							<h2>Mail Address</h2>
-							<a href="mailto:<?php echo $mail; ?>"><?php echo $mail; ?></a>
+							<?php echo $mail; ?>
 						
 					</section>
 
