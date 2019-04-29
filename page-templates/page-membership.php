@@ -86,7 +86,7 @@ $mail = get_field("mailing_address");
 							
 						</div>
 					</section>
-					<section class="mailing-address">
+					<section class="mailing-address entry-content" >
 							
 							<?php echo $mail; ?>
 						
