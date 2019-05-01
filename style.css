@@ -1402,7 +1402,7 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
 }
 .member-intro {
 	width: 70%;
-	margin: 30px auto 80px auto;
+	margin: 30px auto 30px auto;
 }
 .member-intro .video {
 	max-width: 640px;
@@ -1416,14 +1416,17 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
     display: -ms-flexbox;
     display: flex;
 	-webkit-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
+	-ms-flex-align: start;
+	 align-items: flex-start;
+	-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+     justify-content: space-between;
 }
 .membership-thirds .third {
 	width: 28%;
 	display: inline-block;
 	text-align: left;
-	margin: 2%;
+	/*margin: 2%;*/
 }
 .embed-container iframe {
 	margin: 0 auto;

@@ -20,6 +20,7 @@ $tier_3_mail = get_field("tier_3_mail");
 $tier_1_btn = get_field("tier_1_btn");
 $tier_2_btn = get_field("tier_2_btn");
 $tier_3_btn = get_field("tier_3_btn");
+$tier_3_btn_link = get_field("tier_3_btn_link");
 $mail = get_field("mailing_address");
 ?>
 
@@ -81,7 +82,7 @@ $mail = get_field("mailing_address");
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
 							<div class="button">
-								<a class="mem-donation" href="">
+								<a class="" href="<?php echo $tier_3_btn_link; ?>">
 									<?php echo $tier_3_btn; ?>
 								</a>
 							</div>	
