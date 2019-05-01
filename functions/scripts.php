@@ -17,7 +17,7 @@
 		// Isotpope...
 		wp_register_script(
 			'isotope',
-			'https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js',
+			get_bloginfo('template_directory') . '/js/isotope.min.js',
 			array('jquery'), '1.2', false );
 		wp_enqueue_script('isotope');
 		
@@ -26,7 +26,7 @@
 		wp_deregister_script('imagesloaded');
 		wp_register_script(
 			'imagesloaded',
-			'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js',
+			get_bloginfo('template_directory') . '/js/imagesloaded.js',
 			array('jquery'), '3.2.2', false );
 		wp_enqueue_script('imagesloaded');
 		
