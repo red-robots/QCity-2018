@@ -1024,6 +1024,13 @@ html.pum-open.pum-open-overlay.pum-open-scrollable body > .ui-datepicker[aria-hi
 	display: none;
 }
 /*==============JOB BOARD PAGE ===============*/
+.membership-banner {
+	width: 100%;
+	float: left;
+}
+.membership-banner img {
+	width: 100%;
+}
 .jobs-banner-wrapper {
 	position: relative;
 }

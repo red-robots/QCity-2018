@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Membership
+ * Template Name: Event Submission
  */
 acf_form_head();
 // sanitize inputs
