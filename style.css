@@ -1404,6 +1404,10 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
 	width: 70%;
 	margin: 30px auto 30px auto;
 }
+.eventsub-intro {
+	width: 100%;
+	margin: 30px auto 30px auto;
+}
 .member-intro .video {
 	max-width: 640px;
 	margin: 0 auto 30px auto;
@@ -1412,21 +1416,13 @@ box-shadow: 3px 3px 12px -3px rgba(0,0,0,0.45);
 	width: 100%;
 	float: left;
 	text-align: center;
-	display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
-	 align-items: flex-start;
-	-webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-     justify-content: space-between;
 }
 .membership-thirds .third {
-	width: 28%;
+	width: 100%;
 	display: inline-block;
 	text-align: left;
 	/*margin: 2%;*/
+	margin-bottom: 20px;
 }
 .embed-container iframe {
 	margin: 0 auto;
@@ -4329,6 +4325,20 @@ section#third {
 	float: left;
 	margin-left: 4%;
 	margin-top: 30px;
+}
+.membership-thirds {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	 align-items: flex-start;
+	-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+     justify-content: space-between;
+}
+.membership-thirds .third {
+	width: 28%;
 }
 /* = Footer
 -------------------------------------------------------------- */

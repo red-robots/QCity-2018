@@ -47,7 +47,7 @@ $mail = get_field("mailing_address");
 						</div><!-- border title -->
 					</header><!-- .archive-header -->
 					
-					<section class="member-intro">
+					<section class="eventsub-intro">
 						<?php if( $video ) { ?>
 							<div class="video">
 								<div class="embed-container">
@@ -63,7 +63,7 @@ $mail = get_field("mailing_address");
 					<section class="tiers membership-thirds">
 						<div class="third entry-content">
 							<?php echo $tier_1_desc; ?>
-							<div class="button mem-annual">
+							<div class="button event-1">
 								<a class=" " href="">
 									<?php echo $tier_1_btn; ?>
 								</a>
@@ -72,7 +72,7 @@ $mail = get_field("mailing_address");
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
-							<div class="button mem-monthly">
+							<div class="button event-2">
 								<a class="" href="">
 									<?php echo $tier_2_btn; ?>
 								</a>
@@ -81,7 +81,7 @@ $mail = get_field("mailing_address");
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
-							<div class="button">
+							<div class="button event-3">
 								<a class="" href="<?php echo $tier_3_btn_link; ?>">
 									<?php echo $tier_3_btn; ?>
 								</a>
