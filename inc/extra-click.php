@@ -9,10 +9,12 @@
 */
 
 // Categort ID's
-$healthID = 'category_6';
+// $healthID = 'category_6';
+$healthID = 'category_5'; // Entertainment
 $peopleID = 'category_4';
 $newsID = 'category_1';
-$faithID = 'category_2';
+$faithID = 'category_2465'; // Qcity Biz
+// $faithID = 'category_2';
 
 // Get selected Posts
 $healthFeaturedPost = get_field('post', $healthID);
@@ -33,7 +35,8 @@ $faithFeaturedPost = get_field('post', $faithID);
 
 
 */
-$color = get_field( 'category_color', 'category_6');
+// $color = get_field( 'category_color', 'category_6');
+$color = get_field( 'category_color', 'category_5');
 if( $healthFeaturedPost != '' )  {
 	$args = array(
 	    'posts_per_page' => 1, 
@@ -42,11 +45,13 @@ if( $healthFeaturedPost != '' )  {
 } else {
 	$args = array(
 	    'posts_per_page' => 1, 
-	    'cat' => '6', 
+	    // 'cat' => '6', 
+	    'cat' => '5', 
 	    'meta_query' => [
 	        [
 	            'key' => '_yoast_wpseo_primary_category',
-	            'value' => '6',
+	            // 'value' => '6',
+	            'value' => '5',
 	        ]
 	    ],
 	    
@@ -61,7 +66,8 @@ if ( $q->have_posts() ) {
 
 	<div class="extra-click blocks">
 		<div class="solid-border-title" style="border-bottom: 3px solid <?php echo $color; ?>">
-            <h2 style="background-color: <?php echo $color; ?>">Health</h2>
+            <h2 style="background-color: <?php echo $color; ?>">Entertainment</h2>
+            <!-- <h2 style="background-color: <?php echo $color; ?>">Health</h2> -->
         </div><!-- border title -->
 		<a href="<?php the_permalink(); ?>">
 			<div class="post-block-image">
@@ -199,9 +205,10 @@ if ( $q->have_posts() ) {
 
 ###########  	Faitth    ###############
 
-
+2465
 */
-$color = get_field( 'category_color', 'category_2' );
+// $color = get_field( 'category_color', 'category_2' );
+$color = get_field( 'category_color', 'category_2465' );
 if( $faithFeaturedPost != '' )  {
 	$args = array(
 	    'posts_per_page' => 1, 
@@ -210,11 +217,13 @@ if( $faithFeaturedPost != '' )  {
 } else {
 	$args = array(
 	    'posts_per_page' => 1, 
-	    'cat' => '2', 
+	    // 'cat' => '2',
+	     'cat' => '2465', 
 	    'meta_query' => [
 	        [
 	            'key' => '_yoast_wpseo_primary_category',
-	            'value' => '2',
+	            // 'value' => '2',
+	            'value' => '2465',
 	        ]
 	    ],
 	    
@@ -230,7 +239,8 @@ if ( $q->have_posts() ) {
 
        <div class="extra-click blocks">
 		<div class="solid-border-title" style="border-bottom: 3px solid <?php echo $color; ?>">
-            <h2 style="background-color: <?php echo $color; ?>">Faith</h2>
+            <!-- <h2 style="background-color: <?php echo $color; ?>">Faith</h2> -->
+            <h2 style="background-color: <?php echo $color; ?>">Qcity Biz</h2>
         </div><!-- border title -->
 		<a href="<?php the_permalink(); ?>">
 			<div class="post-block-image">

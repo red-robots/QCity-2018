@@ -183,7 +183,7 @@ get_template_part('ads/sponsor-header');
 					$link_text = get_field("sponsorship_policy_text",39809);?>
 						<div class="sponsor-sidebar">
 							<div class="sponsor-sidebar-wrapper">
-							<h2>Produced For:</h2>
+							<h2>Sponsored By:</h2>
 							<?php if($logo):?>
 								<?php if($logo_link):?>
 									<a href="<?php echo $logo_link;?>">
