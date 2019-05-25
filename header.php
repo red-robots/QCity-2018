@@ -39,61 +39,13 @@
 <script type="text/javascript"async src="https://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
 <?php wp_head(); ?>
 
-<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-<script>
-  var googletag = googletag || {};
-  googletag.cmd = googletag.cmd || [];
-</script>
-
-<?php
-//
-//		Need to query Google AD scripts
-//
-	$wp_query = new WP_Query();
-	$wp_query->query(array(
-	'post_type'=>'ad',
-	'posts_per_page' => -1
-));
-	if ($wp_query->have_posts()) :  while ($wp_query->have_posts()) :  $wp_query->the_post();
-	$headerScript = get_field('header_script');
-	$enable = get_field('enable_ad');
-	if( $enable == 'Yes' ) :
-		if( $headerScript != '' ) { 
-            echo $headerScript;
-            echo "<!--".get_the_title()."-->";
-        }
-	endif; // end if enabled
-	endwhile; endif; wp_reset_postdata(); wp_reset_query(); ?>
-<?php
-//
-//		Need to query Google AD scripts
-//
-	$wp_query = new WP_Query();
-	$wp_query->query(array(
-	'post_type'=>'sponsor',
-	'posts_per_page' => -1
-));
-	if ($wp_query->have_posts()) :  while ($wp_query->have_posts()) :  $wp_query->the_post();
-	$headerScript = get_field('header_script');
-	$enable = get_field('enable_ad');
-	if( $enable == 'Yes' ) :
-		if( $headerScript != '' ) { echo $headerScript; }
-	endif; // end if enabled
-    $headerScript = get_field('header_script_header');
-	$enable = get_field('enable_ad_header');
-	if( $enable == 'Yes' ) :
-		if( $headerScript != '' ) { 
-            echo $headerScript;
-            echo "<!--".get_the_title()."-->"; 
-        }
-	endif; // end if enabled
-	endwhile; endif; wp_reset_postdata(); wp_reset_query(); ?>
+<?php include(locate_template('inc/google-ads.php', false, false)); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 
-<?php get_template_part('ads/pencil');  ?>
+<?php include(locate_template('ads/pencil.php', false, false));  ?>
 
 <div class="top"></div><!-- top -->
 
