@@ -413,7 +413,28 @@ section#third{width:100%}
 .signup-embed>.col-1 .copy{margin-bottom:10px}
 .signup-embed>.col-2{text-align:center}
 .signup-embed>.col-2 a{color:white;display:inline-block;background-color:#1855a5;padding:10px 20px;min-width:150px;text-align:center;border-radius:5px;font-weight:700;font-size:16px}
-.entry-content.single .jetpack-social{position:relative}
+.socialone{width:40px}
+.socialtwo{width:90px}
+.socialthree{width:120px}
+.socialfour{width:160px}
+.socialfive{width:200px}
+.socialsix{width:240px}
+#sociallinks{text-align:left;margin:10px auto}
+#sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative}
+#sociallinks ul li{float:left;position:relative;margin:0 5px 0 5px}
+#sociallinks ul a{text-decoration:none;background-size:70px 35px;background-repeat:no-repeat;display:inline-block;width:35px;height:35px;position:relative;display:block}
+#sociallinks i{font-size:2vw}
+#sociallinks .facebook a{width:35px;background-position:-0 -0}
+#sociallinks .twitter a{width:35px;background-position:-35px -0}
+#sociallinks .linkedin a{width:30px;background-position:-60px 0}
+#sociallinks .linkedin a:hover{background-position:-60px -30px}
+#sociallinks .instagram a{width:30px;background-position:-90px -0}
+#sociallinks .instagram a:hover{background-position:-90px -30px}
+#sociallinks .google a{width:30px;background-position:-120px -0}
+#sociallinks .google a:hover{background-position:-120px -30px}
+@media screen and (min-width:652px){#sociallinks{float:right;margin:10px 0}
+#sociallinks ul li{margin:0 0 0 10px}
+}.entry-content.single .jetpack-social{position:relative}
 .sponsor-sidebar.mobile .sponsor-sidebar-wrapper{max-width:100%}
 .widget-area .sponsor-sidebar{display:none}
 .sponsor-sidebar{margin:0 0 20px 0}
