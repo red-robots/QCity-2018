@@ -1,3 +1,4 @@
+
 <?php 
 // setup theme
 function twentytwelve_setup() {
@@ -70,21 +71,22 @@ function twentytwelve_scripts_styles() {
 		wp_enqueue_script( 'comment-reply' );
 
 	// Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+	// now done in assets
+	// wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
 
 	$font_url = twentytwelve_get_font_url();
 	if ( ! empty( $font_url ) )
 		wp_enqueue_style( 'twentytwelve-fonts', esc_url_raw( $font_url ), array(), null );
 
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() , array(), "5674323");
+	//wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() , array(), "5674323");
 	
 	// Loads the Flexslider
-	wp_enqueue_style( 'twentytwelve-flex', get_template_directory_uri() . '/css/flexslider.css', array( 'twentytwelve-style' ), '20121010' );
+	// wp_enqueue_style( 'twentytwelve-flex', get_template_directory_uri() . '/css/flexslider.css', array( 'twentytwelve-style' ), '20121010' );
 
 
 // Loads the Colorbox
-	wp_enqueue_style( 'twentytwelve-color', get_template_directory_uri() . '/css/colorbox.css', array( 'twentytwelve-style' ), '20121010' );
+	// wp_enqueue_style( 'twentytwelve-color', get_template_directory_uri() . '/css/colorbox.css', array( 'twentytwelve-style' ), '20121010' );
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
