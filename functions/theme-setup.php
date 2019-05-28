@@ -1,4 +1,3 @@
-
 <?php 
 // setup theme
 function twentytwelve_setup() {
