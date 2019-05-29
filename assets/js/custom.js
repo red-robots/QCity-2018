@@ -6,7 +6,7 @@
  */
 
 jQuery(document).ready(function ($) {
-
+alert('hey!');
 
 //  Newsletter popup cookie
 // ________________________________________	
@@ -232,6 +232,7 @@ __________________________________________
 	})();
 
 	(function(){
+		
         $.post(
             bellaajaxurl.url,
             {

@@ -2,11 +2,13 @@
  /**
  * Bring in some Custom Functions
  */
+ // Enqueues Custom Theme Scripts
+require( get_template_directory() . '/functions/scripts.php' );
+
 // Enqueues Custom Theme Scripts
 require( get_template_directory() . '/functions/theme-setup.php' );
 
-// Enqueues Custom Theme Scripts
-require( get_template_directory() . '/functions/scripts.php' );
+
 
 // Custom Post Types
 require( get_template_directory() . '/functions/post-types.php' );
