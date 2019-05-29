@@ -18,7 +18,7 @@
 
 	wp_enqueue_script( 
 			'acstarter-custom', 
-			get_template_directory_uri() . '/assets/js/custom.min.js', 
+			get_template_directory_uri() . '/assets/js/custom.js', 
 			array(), '20120206', 
 			true 
 		);
