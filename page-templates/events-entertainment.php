@@ -10,73 +10,76 @@ get_header();?>
             $banner_copy = get_field("banner_copy");?>
             <div class="jobs-banner event-banner">
                 <?php if($banner_image):?>
-                    <div class="background" style="background-image:url(<?php echo $banner_image['url'];?>);"></div>
+                    <!-- <div class="background" style="background-image:url(<?php echo $banner_image['url'];?>);"></div> -->
+                    <img  src="<?php echo $banner_image['url']; ?>">
                 <?php endif;?>
-                <?php if($banner_copy):?>
-                    <div class="row-1">
-                        <?php echo $banner_copy;?>
-                    </div><!--.row-1-->
-                <?php endif;?>
-                <div class="row-2">
-                    <div class="banner-button post-event">Post an Event</div>
-                    <div class="banner-button find">Event Categories
-                        <?php $terms = get_terms(array('taxonomy'=>'event_cat'));
-                        if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
-                            <ul>
-                                <?php foreach($terms as $term):?>
-                                    <li>
-                                        <a href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a>    
-                                    </li>
-                                <?php endforeach;?>
-                            </ul>
-                        <?php endif;?>
-                    </div>
-                </div><!--.row-1-->
-                <div class="row-3">
-                    <form action="" method="GET">
+                <div class="banner-info">
+                    <?php if($banner_copy):?>
                         <div class="row-1">
-                            <input type="text" name="search" placeholder="Search">
-                            <button type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            <div class="clear"></div>
+                            <?php echo $banner_copy;?>
                         </div><!--.row-1-->
-                        <div class="row-2">
-                            <?php $terms = get_field("categories_to_show");
-                            if(is_array($terms)&&!empty($terms)):?>
+                    <?php endif;?>
+                    <div class="row-2">
+                        <div class="banner-button post-event">Post an Event</div>
+                        <div class="banner-button find">Event Categories
+                            <?php $terms = get_terms(array('taxonomy'=>'event_cat'));
+                            if(!is_wp_error($terms)&&is_array($terms)&&!empty($terms)):?>
                                 <ul>
-                                    <li>categories:</li>
                                     <?php foreach($terms as $term):?>
                                         <li>
-                                            <input type="radio" name="category" id="<?php echo $term->slug;?>" value="<?php echo $term->term_id;?>"><label for="<?php echo $term->slug;?>"><?php echo $term->name;?></label>
+                                            <a href="<?php echo get_term_link($term->term_id);?>"><?php echo $term->name;?></a>    
                                         </li>
                                     <?php endforeach;?>
                                 </ul>
                             <?php endif;?>
-                        </div><!--.row-2-->
-                        <div class="row-3">
-                            <a class="banner-button" href="<?php echo add_query_arg('date','weekend',get_permalink());?>">Events this Weekend</a>
-                            <!--<ul>
-                                <li>date:</li>
-                                <li>
-                                    <input type="radio" name="date" id="date-weekend" value="weekend"><label for="date-weekend">Events this Weekend</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="date" id="date-today" value="today"><label for="date-today">today</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="date" id="date-week" value="week"><label for="date-week">this week</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="date" id="date-month" value="month"><label for="date-month">this month</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="date" id="date-year" value="year"><label for="date-year">this year</label>
-                                </li>
-                            </ul>-->
-                        </div><!--.row-3-->
-                    </form>
-                </div><!--.row-1-->
+                        </div>
+                    </div><!--.row-1-->
+                    <div class="row-3">
+                        <form action="" method="GET">
+                            <div class="row-1">
+                                <input type="text" name="search" placeholder="Search">
+                                <button type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                                <div class="clear"></div>
+                            </div><!--.row-1-->
+                            <div class="row-2">
+                                <?php $terms = get_field("categories_to_show");
+                                if(is_array($terms)&&!empty($terms)):?>
+                                    <ul>
+                                        <li>categories:</li>
+                                        <?php foreach($terms as $term):?>
+                                            <li>
+                                                <input type="radio" name="category" id="<?php echo $term->slug;?>" value="<?php echo $term->term_id;?>"><label for="<?php echo $term->slug;?>"><?php echo $term->name;?></label>
+                                            </li>
+                                        <?php endforeach;?>
+                                    </ul>
+                                <?php endif;?>
+                            </div><!--.row-2-->
+                            <div class="row-3">
+                                <a class="banner-button" href="<?php echo add_query_arg('date','weekend',get_permalink());?>">Events this Weekend</a>
+                                <!--<ul>
+                                    <li>date:</li>
+                                    <li>
+                                        <input type="radio" name="date" id="date-weekend" value="weekend"><label for="date-weekend">Events this Weekend</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="date" id="date-today" value="today"><label for="date-today">today</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="date" id="date-week" value="week"><label for="date-week">this week</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="date" id="date-month" value="month"><label for="date-month">this month</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="date" id="date-year" value="year"><label for="date-year">this year</label>
+                                    </li>
+                                </ul>-->
+                            </div><!--.row-3-->
+                        </form>
+                    </div><!--.row-1-->
+                </div>
             </div><!--.event-banner-->
             <div id="content" role="main" class="wrapper">
 
@@ -161,10 +164,18 @@ get_header();?>
                                 $display_date = null;
                                 if($date):
                                     $display_date = (new DateTime($date))->format('l, F j, Y');
+                                    $mDs = (new DateTime($date))->format('F');
                                 endif;
                                 if($enddate):
                                     $display_date = (new DateTime($date))->format('l, F j');
-                                    $end_display_date = (new DateTime($enddate))->format('j, Y');
+                                    $mDe = (new DateTime($enddate))->format('F');
+                                    if($mDe == $mDs) {
+                                        $end_display_date = (new DateTime($enddate))->format('j, Y');
+                                    } else {
+                                        $display_date = (new DateTime($date))->format('F j, Y');
+                                        $end_display_date = (new DateTime($enddate))->format('F j, Y');
+                                    }
+                                    
                                     echo '<!-- ';
                                     echo '<pre>';
                                     print_r($end_display_date);
@@ -187,6 +198,7 @@ get_header();?>
                                                     </div><!--.date-->
                                                 <?php else: ?>
                                                     <div class="date">
+                                                    <?php //echo $mDe.' - '.$mDs.'<br>'; ?>
                                                         <?php echo $display_date.' - '.$end_display_date;?>
                                                     </div><!--.date-->
                                                 <?php endif;

@@ -3,7 +3,7 @@
  function ineedmyjava() {
 	if (!is_admin()) {
 
-		wp_enqueue_style( 'acstarter-style', get_template_directory_uri() . '/style.min.css' );
+		wp_enqueue_style( 'acstarter-style', get_template_directory_uri() . '/style.css' );
  
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false);
