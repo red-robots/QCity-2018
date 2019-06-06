@@ -54,8 +54,26 @@ if ($wp_query->have_posts()) : ?>
 // num of posts
 $numPosts = $wp_query->post_count;
 $i++;
-$date = DateTime::createFromFormat('Ymd', get_field('event_date'));
-$newdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+// $date = DateTime::createFromFormat('Ymd', get_field('event_date'));
+// $newdate = DateTime::createFromFormat('Ymd', get_field('event_date'));
+$enddate = get_field("end_date");
+$date = get_field("event_date");
+
+if($date):
+    $display_date = (new DateTime($date))->format('l, F j, Y');
+    $mDs = (new DateTime($date))->format('F');
+endif;
+if($enddate):
+    $display_date = (new DateTime($date))->format('l, F j');
+    $mDe = (new DateTime($enddate))->format('F');
+    if($mDe == $mDs) {
+        $end_display_date = (new DateTime($enddate))->format('j, Y');
+    } else {
+        $display_date = (new DateTime($date))->format('F j, Y');
+        $end_display_date = (new DateTime($enddate))->format('F j, Y');
+    }
+endif;
+
 /*echo '<pre>';
 print_r($date);*/
 $image = get_field('event_image'/*, $term*/ ); 
@@ -81,8 +99,17 @@ $thumb = $image['sizes'][ $size ];
 
          ?>
         <?php //if( $numPosts != $i && $numPosts - 1 != $i ) { ?>
-        	<?php echo $date->format('l'); ?>   <?php echo $date->format('n/d'); ?>
+        	<?php //echo $date->format('l'); ?>   <?php //echo $date->format('n/d'); ?>
         <?php //} ?>
+        <?php if($display_date && $enddate == ''):?>
+            
+                <?php echo $display_date;?>
+           
+        <?php else: ?>
+            
+                <?php echo $display_date.' - '.$end_display_date;?>
+           
+        <?php endif; ?>
         </div>
         <!-- <div class="event-month-num"></div> -->
         <div class="event-title"><?php the_title(); //echo ac_get_title(38); ?></div>

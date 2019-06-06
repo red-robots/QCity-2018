@@ -388,9 +388,21 @@ get_header();?>
                                 // if($i>=12) break;
                                 $query->the_post(); 
                                 $date = get_field("event_date");
+                                $enddate = get_field("end_date");
                                 $display_date = null;
                                 if($date):
                                     $display_date = (new DateTime($date))->format('l, F j, Y');
+                                    $mDs = (new DateTime($date))->format('F');
+                                endif;
+                                if($enddate):
+                                    $display_date = (new DateTime($date))->format('l, F j');
+                                    $mDe = (new DateTime($enddate))->format('F');
+                                    if($mDe == $mDs) {
+                                        $end_display_date = (new DateTime($enddate))->format('j, Y');
+                                    } else {
+                                        $display_date = (new DateTime($date))->format('F j, Y');
+                                        $end_display_date = (new DateTime($enddate))->format('F j, Y');
+                                    }
                                 endif;
                                 $venue = get_field("name_of_venue");
                                 $image = get_field("event_image");?>
@@ -402,9 +414,14 @@ get_header();?>
                                                     <img src="<?php echo $image['sizes']['medium'];?>" alt="<?php echo $image['alt'];?>">
                                                 <?php endif;?>
                                                 <h2><?php the_title();?></h2>
-                                                <?php if($display_date):?>
+                                                <?php if($display_date && $enddate == ''):?>
                                                     <div class="date">
                                                         <?php echo $display_date;?>
+                                                    </div><!--.date-->
+                                                <?php else: ?>
+                                                    <div class="date">
+                                                    <?php //echo $mDe.' - '.$mDs.'<br>'; ?>
+                                                        <?php echo $display_date.' - '.$end_display_date;?>
                                                     </div><!--.date-->
                                                 <?php endif;
                                                 if($venue):?>
