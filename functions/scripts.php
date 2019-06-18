@@ -32,6 +32,14 @@
 		
 		//Isotpope...
 		wp_register_script(
+			'navigation',
+			get_bloginfo('template_directory') . '/js/navigation.js',
+			array('jquery'), '1.2', true );
+		wp_enqueue_script('navigation');
+
+
+		//Isotpope...
+		wp_register_script(
 			'isotope',
 			get_bloginfo('template_directory') . '/js/isotope.min.js',
 			array('jquery'), '1.2', true );
@@ -64,7 +72,7 @@
 		wp_enqueue_script(
 			'custom',
 			get_bloginfo('template_directory') . '/js/custom.js',
-			array('jquery','isotope','colorbox','blocks','imagesloaded','flexslider'), '1.06' , true );
+			array('jquery','navigation','isotope','colorbox','blocks','imagesloaded','flexslider'), '1.06' , true );
 
 
 
