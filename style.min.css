@@ -233,8 +233,8 @@ select.eventtype{-webkit-appearance:none;padding:9px 15px;text-align:center;colo
 .button-thirds-first,.button-thirds-last,select.button-thirds-last{width:98%;margin:0 0 10px 0}
 #header-left,#header-center,#header-right{width:100%;margin:20px 0 20px 0;position:relative;text-align:center}
 #header-left h3,#header-right h3{font-family:'Oswald',sans-serif;font-weight:normal;font-size:12px;margin:0 0 10px 0}
-#header-left,#header-right{display:none}
-.header-date{width:auto;display:inline-block;font-family:'Oswald',sans-serif;font-size:18px;margin:8px auto}
+h3.search-header,.header-date{display:none}
+.header-date{width:auto;font-family:'Oswald',sans-serif;font-size:18px;margin:8px auto}
 .assistive-text,.site .screen-reader-text{position:absolute !important;clip:rect(1px,1px,1px,1px)}
 .main-navigation .assistive-text:focus{background:#fff;border:2px solid #333;border-radius:3px;clip:auto !important;color:#000;display:block;font-size:12px;padding:12px;position:absolute;top:5px;left:5px;z-index:100000}
 .gform_wrapper form{overflow-x:visible !important}
@@ -422,8 +422,8 @@ section#third{width:100%}
 .socialfive{width:200px}
 .socialsix{width:240px}
 #sociallinks{text-align:left;margin:10px auto}
-#sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative}
-#sociallinks ul li{float:left;position:relative;margin:0 5px 0 5px}
+#sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative;text-align:center;width:100%}
+#sociallinks ul li{display:inline-block;position:relative;margin:0 5px 0 5px}
 #sociallinks ul a{text-decoration:none;background-size:70px 35px;background-repeat:no-repeat;display:inline-block;width:35px;height:35px;position:relative;display:block}
 #sociallinks i{font-size:2vw}
 #sociallinks .facebook a{width:35px;background-position:-0 -0}

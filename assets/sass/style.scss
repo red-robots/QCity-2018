@@ -7,6 +7,11 @@ Description: Responsive for Bellaworks
 
 */
 
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+$tabwidth: 600px;
+$midwidth: 900px;
+$deskwidth: 1200px;
 
 /*@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,700);*/
 /*@import url(https://fonts.googleapis.com/css?family=Arimo);*/
@@ -793,10 +798,16 @@ select.eventtype {
 	font-size: 12px;
 	margin: 0 0 10px 0;
 }
-#header-left, #header-right {display: none;}
+// #header-left, #header-right {display: none;}
+h3.search-header, .header-date {
+	display: none;
+	@media screen and (min-width: $tabwidth) {
+		// display: inline-block;
+	}
+}
 .header-date {
 	width: auto;
-	display: inline-block;	
+	// display: inline-block;	
 	font-family: 'Oswald', sans-serif;
 	font-size:18px;
 	margin: 8px auto;
@@ -1990,12 +2001,14 @@ section#third {
 	list-style-type: none;
 	z-index: 2;	
 	position: relative;
+	text-align: center;
+	width: 100%;
 }
 /*
 	The amount of margin between each icon
 */
 #sociallinks  ul li {
-	float: left;
+	display: inline-block;
 	position: relative;
 	margin: 0px 5px 0px 5px;
 }

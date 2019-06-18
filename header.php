@@ -65,7 +65,7 @@
 	<header id="masthead" class="site-header" role="banner">
     
 		<div id="header-left">
-        <h3>SEARCH SITE</h3>
+        <h3 class="search-header">SEARCH SITE</h3>
         <?php get_template_part('inc/searchform'); ?>
         <div class="clear"></div>
         	<div class="header-date"><?php echo date('F d, Y'); ?></div>
