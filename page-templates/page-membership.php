@@ -20,6 +20,9 @@ $tier_3_mail = get_field("tier_3_mail");
 $tier_1_btn = get_field("tier_1_btn");
 $tier_2_btn = get_field("tier_2_btn");
 $tier_3_btn = get_field("tier_3_btn");
+$tier_1_link = get_field("tier_1_btn_link");
+$tier_2_link = get_field("tier_2_btn_link");
+$tier_3_link = get_field("tier_3_btn_link");
 $mail = get_field("mailing_address");
 ?>
 
@@ -63,7 +66,7 @@ $mail = get_field("mailing_address");
 						<div class="third entry-content">
 							<?php echo $tier_1_desc; ?>
 							<div class="button mem-annual">
-								<a class=" " href="">
+								<a class=" " href="<?php echo $tier_1_link; ?>">
 									<?php echo $tier_1_btn; ?>
 								</a>
 							</div>	
@@ -72,7 +75,7 @@ $mail = get_field("mailing_address");
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
 							<div class="button mem-monthly">
-								<a class="" href="">
+								<a class="" href="<?php echo $tier_2_link; ?>">
 									<?php echo $tier_2_btn; ?>
 								</a>
 							</div>	
@@ -81,7 +84,7 @@ $mail = get_field("mailing_address");
 						<div class="third entry-content">
 							<?php echo $tier_3_desc; ?>
 							<div class="button">
-								<a class="mem-donation" href="">
+								<a class="" href="<?php echo $tier_3_link; ?>">
 									<?php echo $tier_3_btn; ?>
 								</a>
 							</div>	
