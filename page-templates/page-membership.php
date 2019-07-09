@@ -65,7 +65,7 @@ $mail = get_field("mailing_address");
 					<section class="tiers membership-thirds">
 						<div class="third entry-content">
 							<?php echo $tier_1_desc; ?>
-							<div class="button mem-annual">
+							<div class="button ">
 								<a class=" " href="<?php echo $tier_1_link; ?>">
 									<?php echo $tier_1_btn; ?>
 								</a>
@@ -74,7 +74,7 @@ $mail = get_field("mailing_address");
 						</div>
 						<div class="third entry-content">
 							<?php echo $tier_2_desc; ?>
-							<div class="button mem-monthly">
+							<div class="button ">
 								<a class="" href="<?php echo $tier_2_link; ?>">
 									<?php echo $tier_2_btn; ?>
 								</a>
