@@ -166,6 +166,7 @@ embed,iframe,object,video{max-width:100%}
 .alignleft{float:left}
 .alignright,.alignright-event{float:right}
 .aligncenter{display:block;margin-left:auto;margin-right:auto}
+.googleads{width:auto;overflow:hidden;padding:20px 0 50px 0}
 div.mce-toolbar-grp>div,.acf-editor-wrap .wp-switch-editor,.wp-media-buttons .insert-media,.wp-editor-tools{display:none}
 .site-content nav{clear:both;line-height:2;overflow:hidden;margin:48px 0}
 #nav-above{padding:24px 0}
@@ -425,8 +426,9 @@ section#third{width:100%}
 #sociallinks ul{margin:0;padding:0;list-style-type:none;z-index:2;position:relative;text-align:center;width:100%}
 #sociallinks ul li{display:inline-block;position:relative;margin:0 5px 0 5px}
 #sociallinks ul a{text-decoration:none;background-size:70px 35px;background-repeat:no-repeat;display:inline-block;width:35px;height:35px;position:relative;display:block}
-#sociallinks i{font-size:2vw}
-#sociallinks .facebook a{width:35px;background-position:-0 -0}
+#sociallinks i{font-size:5vw}
+@media screen and (min-width:600px){#sociallinks i{font-size:2vw}
+}#sociallinks .facebook a{width:35px;background-position:-0 -0}
 #sociallinks .twitter a{width:35px;background-position:-35px -0}
 #sociallinks .linkedin a{width:30px;background-position:-60px 0}
 #sociallinks .linkedin a:hover{background-position:-60px -30px}

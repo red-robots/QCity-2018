@@ -36,6 +36,15 @@
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
 </script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1009068/In-Story_Gutenbers', [728, 90], 'div-gpt-ad-1562862188941-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
 <script type="text/javascript"async src="https://launch.newsinc.com/js/embed.js" id="_nw2e-js"></script>
 <?php wp_head(); ?>
 

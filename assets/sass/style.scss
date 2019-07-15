@@ -422,7 +422,11 @@ img.wp-post-image {
 /*	border-radius: 3px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);*/
 }
-
+.googleads {
+	width: auto;
+	overflow: hidden;
+	padding: 20px 0 50px 0;
+}
 div.mce-toolbar-grp>div,
 .acf-editor-wrap .wp-switch-editor,
 .wp-media-buttons .insert-media,
@@ -2026,7 +2030,11 @@ section#third {
 	display: block;
 }
 #sociallinks i {
-	font-size: 2vw;
+	font-size: 5vw;
+	@media screen and (min-width: $tabwidth) {
+		font-size: 2vw;
+	}
+
 }
 /*#sociallinks  ul a:hover {
 	opacity:1;

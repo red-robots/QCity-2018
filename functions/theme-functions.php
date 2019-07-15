@@ -14,6 +14,43 @@ add_image_size('thirds',400,278,array('center','top'));
 add_image_size('small',250,9999 );
 
 /*-------------------------------------
+	
+	Gutenburg Google Adword Block
+
+---------------------------------------*/
+
+add_action('acf/init', 'acc_gut_ad_block_acf');
+function acc_gut_ad_block_acf() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'adblock',
+			'title'				=> __('Ad Block'),
+			'description'		=> __('A custom Google Ad Block.'),
+			'render_callback'	=> 'acf_gut_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'welcome-widgets-menus',
+			'keywords'			=> array( 'googlead' ),
+			'mode'              => 'edit',
+		));
+	}
+}
+
+function acf_gut_callback( $block ) {
+	
+	// convert name ("acf/adblock") into path friendly slug ("adblock")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
+
+/*-------------------------------------
 	Move JetPack Share
 ---------------------------------------*/
 function jptweak_remove_share() {
