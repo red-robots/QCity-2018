@@ -18,23 +18,76 @@ add_image_size('small',250,9999 );
 	Gutenburg Google Adword Block
 
 ---------------------------------------*/
+// For preview on backend:
+add_action( 'admin_enqueue_scripts', 'load_google_ad_admin' );
+function load_google_ad_admin() {
+	wp_enqueue_script( 'goolge_ad_wp_admin_js', 'https://www.googletagservices.com/tag/js/gpt.js', false, '1.0.0' );
+}
 
-add_action('acf/init', 'acc_gut_ad_block_acf');
-function acc_gut_ad_block_acf() {
+
+function load_google_ad_admin_ind() {
+	wp_enqueue_script( 'goolge_ad_wp_admin_css_min', get_template_directory_uri() . '/js/google.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'load_google_ad_admin_ind' );
+
+
+
+add_action('acf/init', 'acc_gut_ad_block_acf_728');
+function acc_gut_ad_block_acf_728() {
 	
 	// check function exists
 	if( function_exists('acf_register_block') ) {
 		
 		// register a testimonial block
 		acf_register_block(array(
-			'name'				=> 'adblock',
-			'title'				=> __('Ad Block'),
+			'name'				=> 'adblock728',
+			'title'				=> __('Ad Block 728 x 90'),
 			'description'		=> __('A custom Google Ad Block.'),
 			'render_callback'	=> 'acf_gut_callback',
 			'category'			=> 'formatting',
 			'icon'				=> 'welcome-widgets-menus',
 			'keywords'			=> array( 'googlead' ),
-			'mode'              => 'edit',
+			'mode'              => 'preview',
+		));
+	}
+}
+
+add_action('acf/init', 'acc_gut_ad_block_acf_300');
+function acc_gut_ad_block_acf_300() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'adblock300',
+			'title'				=> __('Ad Block 300 x 250'),
+			'description'		=> __('A custom Google Ad Block.'),
+			'render_callback'	=> 'acf_gut_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'welcome-widgets-menus',
+			'keywords'			=> array( 'googlead' ),
+			'mode'              => 'preview',
+		));
+	}
+}
+
+add_action('acf/init', 'acc_gut_ad_block_acf_600');
+function acc_gut_ad_block_acf_600() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'adblock600',
+			'title'				=> __('Ad Block 600 x 200'),
+			'description'		=> __('A custom Google Ad Block.'),
+			'render_callback'	=> 'acf_gut_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'welcome-widgets-menus',
+			'keywords'			=> array( 'googlead' ),
+			'mode'              => 'preview',
 		));
 	}
 }

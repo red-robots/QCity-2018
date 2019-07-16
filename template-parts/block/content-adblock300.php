@@ -6,7 +6,7 @@
  */
 
 // get image field (array)
-$adblock = get_field('gutenberg_ad_block');
+$adblock = get_field_object('field_5d2caed18764c');
 
 // create id attribute for specific styling
 $id = 'adblock-' . $block['id'];
@@ -16,12 +16,12 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 ?>
 
-<div id="<?php echo $id; ?>" class="googleads" >
+<div id="<?php echo $id; ?>" class="googleadswrap" >
 	<?php //echo $adblock; ?>
 	<!-- /1009068/In-Story_Gutenbers -->
-<div id='div-gpt-ad-1562862188941-0' style='width: 728px; height: 90px;'>
+<div id='div-gpt-ad-1563273598512-0' style='width: 300px; height: 250px;' class="googleads">
   <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1562862188941-0'); });
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1563273598512-0'); });
   </script>
 </div>
 </div>

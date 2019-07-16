@@ -422,10 +422,19 @@ img.wp-post-image {
 /*	border-radius: 3px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);*/
 }
+.googleadswrap { 
+	width: 96%;
+	text-align: center;
+	padding: 2%;
+	background-color: #eee;
+	margin: 0 0 30px 0;
+	min-height: 90px;
+}
 .googleads {
 	width: auto;
 	overflow: hidden;
-	padding: 20px 0 50px 0;
+	// padding: 20px 0 50px 0;
+	display: inline-block;
 }
 div.mce-toolbar-grp>div,
 .acf-editor-wrap .wp-switch-editor,

@@ -166,7 +166,8 @@ embed,iframe,object,video{max-width:100%}
 .alignleft{float:left}
 .alignright,.alignright-event{float:right}
 .aligncenter{display:block;margin-left:auto;margin-right:auto}
-.googleads{width:auto;overflow:hidden;padding:20px 0 50px 0}
+.googleadswrap{width:96%;text-align:center;padding:2%;background-color:#eee;margin:0 0 30px 0;min-height:90px}
+.googleads{width:auto;overflow:hidden;display:inline-block}
 div.mce-toolbar-grp>div,.acf-editor-wrap .wp-switch-editor,.wp-media-buttons .insert-media,.wp-editor-tools{display:none}
 .site-content nav{clear:both;line-height:2;overflow:hidden;margin:48px 0}
 #nav-above{padding:24px 0}
