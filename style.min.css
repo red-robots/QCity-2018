@@ -166,8 +166,9 @@ embed,iframe,object,video{max-width:100%}
 .alignleft{float:left}
 .alignright,.alignright-event{float:right}
 .aligncenter{display:block;margin-left:auto;margin-right:auto}
-.googleadswrap{width:96%;text-align:center;padding:2%;background-color:#eee;margin:0 0 30px 0;min-height:90px}
+.googleadswrap{width:96%;text-align:center;padding:2% 2% 0 2%;background-color:#eee;margin:0 0 30px 0;min-height:90px;float:left}
 .googleads{width:auto;overflow:hidden;display:inline-block}
+.promote{width:100%;float:left;padding:10px 0;font-style:italic;color:#333}
 div.mce-toolbar-grp>div,.acf-editor-wrap .wp-switch-editor,.wp-media-buttons .insert-media,.wp-editor-tools{display:none}
 .site-content nav{clear:both;line-height:2;overflow:hidden;margin:48px 0}
 #nav-above{padding:24px 0}
@@ -670,7 +671,7 @@ article.sticky .featured-post{border-top:4px double #ededed;border-bottom:4px do
 .home-content p{font-size:13px !important}
 .entry-content h1,.comment-content h1,.entry-content h2,.comment-content h2,.entry-content h3,.comment-content h3,.entry-content h4,.comment-content h4,.entry-content h5,.comment-content h5,.entry-content h6,.comment-content h6{margin:0 0 24px 0;line-height:1.714285714;width:auto;display:inline-block}
 body.single .entry-content h1{color:#332c2c}
-body.page .entry-content h1.pagetitle{font-size:24px;margin-top:50px}
+body.page .entry-content h1.pagetitle{font-size:2.441em;margin-top:50px}
 body.single .entry-content h2,body.single .entry-content h3,body.single .entry-content h4{color:#7e3518;font-family:'Oswald',sans-serif;font-weight:300}
 body.archive .entry-content h2,body.category .entry-content h2,body.archive h2,body.category h2{color:#332c2c}
 body.page .entry-content h2,body.page .entry-content h3{font-weight:bold}
@@ -682,7 +683,7 @@ h2.search{line-height:1.3;font-family:'Droid Serif',serif;font-weight:700;margin
 .entry-content.single h1.posttitle{padding-left:20px}
 .author.single{padding-left:20px}
 .entry-content h1.pagetitle{width:100%;margin-top:30px}
-.entry-content h2,.comment-content h2,.mu_register h2{font-size:18px;line-height:1.6}
+.entry-content h2,.comment-content h2,.mu_register h2{font-size:1.95em;line-height:1.6}
 .entry-content h3,.comment-content h3{font-size:16px;line-height:1.846153846;color:#332c2c}
 .entry-content h4,.comment-content h4{font-size:14px;color:#332c2c;font-size:18px;line-height:1.2;font-family:'Droid Serif',serif}
 .entry-content h5,.comment-content h5{font-size:18px;line-height:1.846153846;font-family:'Oswald',sans-serif;padding:10px 20px;background-repeat:repeat;background-position:top 5px;color:#fff;text-transform:uppercase;background-image:url(images/nav.png)}
@@ -956,6 +957,7 @@ body.template-front-page .site-content,body.attachment .site-content,body.full-w
 .eb-right{width:66%}
 .event-content{width:50%;margin:30px 0 30px 0;padding:0 4% 0 0;border-right:3px solid #eee;float:left}
 select.eventtype{width:96%}
+.page-template-default .entry-content{width:700px;margin:0 auto}
 }@media screen and (min-width:810px){.entry-content.single .jetpack-social .social-float{left:-6%}
 .big-story-image{padding:0 calc(26.041666667% - 300px) 0 8%;box-sizing:border-box}
 .home-nav{left:10px;top:8px}

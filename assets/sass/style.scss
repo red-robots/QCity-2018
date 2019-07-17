@@ -425,16 +425,25 @@ img.wp-post-image {
 .googleadswrap { 
 	width: 96%;
 	text-align: center;
-	padding: 2%;
+	padding: 2% 2% 0 2%;
 	background-color: #eee;
 	margin: 0 0 30px 0;
 	min-height: 90px;
+	float: left;
 }
 .googleads {
 	width: auto;
 	overflow: hidden;
 	// padding: 20px 0 50px 0;
 	display: inline-block;
+}
+.promote {
+	width: 100%;
+	float: left;
+	padding: 10px 0;
+	font-style: italic;
+	color: #333;
+	// text-align: left;
 }
 div.mce-toolbar-grp>div,
 .acf-editor-wrap .wp-switch-editor,
@@ -3237,8 +3246,10 @@ figcaption {
 }
 /* Advertise
 -------------------------------------------------------------- */
+
 .entry-content h2.advertise-h2 {
 	font-size: 30px;
+
 	font-family: 'Droid Serif', serif;
 	font-weight: 700;	
 	line-height: 1.2;
@@ -3377,7 +3388,9 @@ body.single .entry-content h1 {
 	color: #332c2c;
 }
 body.page .entry-content h1.pagetitle {
-	font-size: 24px;	margin-top: 50px;
+	// font-size: 24px;
+	font-size: 2.441em;	
+	margin-top: 50px;
 }
 body.single .entry-content h2, body.single .entry-content h3, body.single .entry-content h4 {
 	color: #7E3518;
@@ -3411,7 +3424,8 @@ h2.search {
 .entry-content h2,
 .comment-content h2,
 .mu_register h2 {
-	font-size: 18px;
+	// font-size: 18px;
+	font-size: 1.95em;
 	line-height: 1.6;
 }
 .entry-content h3,
@@ -4826,6 +4840,10 @@ Business details
 	select.eventtype {
 		width: 96%;
 	}
+	.page-template-default .entry-content {
+		width: 700px;
+		margin: 0 auto;
+	}
 }
 
 /* Minimum width of 960 pixels. */
@@ -4865,6 +4883,7 @@ Business details
 	.small-post-content h2, .small-post-content-full h2 {font-size: 16px;}
 	.large-post h2 {font-size: 28px;}
 	/*.featured-event-featured {top: 39%;right: 42%;}*/
+
 }
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 980px) {
