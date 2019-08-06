@@ -89,6 +89,8 @@ window.googletag = window.googletag || {cmd: []};
 
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+
+    <!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
     
 		<div id="header-left">
         <h3 class="search-header">SEARCH SITE</h3>
