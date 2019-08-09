@@ -13,6 +13,47 @@ add_image_size('photo',800,500,array('center','top'));
 add_image_size('thirds',400,278,array('center','top'));
 add_image_size('small',250,9999 );
 
+
+function insert_ad_block( $text ) {
+	$postType = get_post_type();
+	$on = get_field('automatic_ads', 'option');
+    if ( is_single() ) :
+    	if( $postType == 'post' && $on[0] == 'On' ) {
+    	// echo $on[0];
+        $ads_text = "<div class='googleadswrap'>
+<div id='div-gpt-ad-1565127901858-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1565127901858-0'); });
+  </script>
+</div><div class='promote insert '>Sponsored</div></div>";
+
+        $split_by = "\n";
+        $insert_after = 6; //number of paragraphs
+
+        // make array of paragraphs
+        $paragraphs = explode( $split_by, $text);
+
+        // if array elements are less than $insert_after set the insert point at the end
+        $len = count( $paragraphs );
+        if (  $len < $insert_after ) $insert_after = $len;
+
+        // insert $ads_text into the array at the specified point
+        array_splice( $paragraphs, $insert_after, 0, $ads_text );
+
+        // loop through array and build string for output
+        foreach( $paragraphs as $paragraph ) {
+            $new_text .= $paragraph; 
+        }
+
+        return $new_text;
+    }
+    endif;
+
+    return $text;
+
+}
+add_filter('the_content', 'insert_ad_block');
+
 /*-------------------------------------
 	
 	Gutenburg Google Adword Block
