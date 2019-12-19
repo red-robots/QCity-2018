@@ -60,9 +60,9 @@ $featured_post = get_field('featured_post');
 	                    );
 	                    wpp_get_mostpopular( $args );
 	                    ?>
-                        <div class="button viewmore-short">
+                        <!--<div class="button viewmore-short">
                             <a href="<?php bloginfo('url'); ?>/business-directory/business-directory-sign-up">Add your business to this directory</a>
-                        </div><!-- button -->
+                        </div> button -->
                     </div><!--.business-directory-search-box-->
                 </div><!--.col-1-->
                 <div class="col-2">
